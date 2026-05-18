@@ -1,9 +1,35 @@
+import Image from "next/image";
+
+import { data } from "./data";
+import Card from "./_components/Card";
+
 export default function Home() {
   return (
-    <div className="">
+    <section className="min-h-dvh flex justify-center items-center">
+      <div className="grid grid-cols-4 grid-rows-2 gap-2">
+        {/* First, double sized cell */}
+        <div className="bg-pink-300 rounded-3xl">
+          <div className="bg-purple-600 rounded-3xl p-6 flex flex-col gap-2">
+            {/* User card */}
+            <Image
+              src={"/image-jeremy.png"}
+              alt="Face of Jeremy"
+              width={234}
+              height={234}
+              className="border-2 border-white rounded-full w-20 aspect-square"
+            />
+            <p className="text-navy-200">Report for</p>
+            <h2 className="text-5xl font-light">Jeremy Robson</h2>
+          </div>
+          {/* Timeframe settings: */}
+          <div>bla bla bla bla</div>
+        </div>
+        {data.map((activity) => (
+          <Card key={activity.title} />
+        ))}
+      </div>
       {/* 
-    Report for
-  Jeremy Robson
+  
 
   Daily
   Weekly
@@ -57,6 +83,6 @@ export default function Home() {
   7hrs <!-- monthly -->
   Previous - 11hrs <!-- monthly -->
   */}
-    </div>
+    </section>
   );
 }
