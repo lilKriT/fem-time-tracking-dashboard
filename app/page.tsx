@@ -26,7 +26,7 @@ export default function Home() {
     <section className="min-h-dvh flex justify-center items-center">
       <div className="grid grid-cols-4 grid-rows-2 gap-2">
         {/* First, double sized cell */}
-        <div className="bg-pink-300 rounded-3xl">
+        <div className="row-span-2 bg-navy-900 rounded-3xl ">
           <div className="bg-purple-600 rounded-3xl p-6 flex flex-col gap-2">
             {/* User card */}
             <Image
@@ -39,9 +39,12 @@ export default function Home() {
             <p className="text-navy-200">Report for</p>
             <h2 className="text-5xl font-light">Jeremy Robson</h2>
           </div>
+
           {/* Timeframe settings: */}
           <div>bla bla bla bla</div>
         </div>
+
+        {/* Cards */}
         {data.map((activity) => (
           <Card
             key={activity.title}
