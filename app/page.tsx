@@ -3,6 +3,24 @@ import Image from "next/image";
 import { data } from "./data";
 import Card from "./_components/Card";
 
+const ActivityMeta = {
+  Work: { color: "", icon: "" },
+  Play: { color: "", icon: "" },
+  Study: { color: "", icon: "" },
+  Exercise: { color: "", icon: "" },
+  Social: { color: "", icon: "" },
+  "Self Care": { color: "", icon: "" },
+};
+
+const getActivityMeta = (title: string) => {
+  return (
+    ActivityMeta[title as keyof typeof ActivityMeta] ?? {
+      color: "",
+      icon: "",
+    }
+  );
+};
+
 export default function Home() {
   return (
     <section className="min-h-dvh flex justify-center items-center">
@@ -25,7 +43,11 @@ export default function Home() {
           <div>bla bla bla bla</div>
         </div>
         {data.map((activity) => (
-          <Card key={activity.title} />
+          <Card
+            key={activity.title}
+            title={activity.title}
+            color={getActivityMeta(activity.title).color}
+          />
         ))}
       </div>
       {/* 

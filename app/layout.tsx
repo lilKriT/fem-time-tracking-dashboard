@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Rubik } from "next/font/google";
+import { Rubik } from "next/font/google";
 import "./globals.css";
 
 const rubikSans = Rubik({
@@ -8,16 +8,6 @@ const rubikSans = Rubik({
   style: ["normal"],
   weight: ["300", "400", "500"],
 });
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
 
 export const metadata: Metadata = {
   title: "Time Tracking Dashboard | lilKriT",

@@ -4,8 +4,14 @@ interface CardProps {
   icon?: React.ReactNode;
 }
 
-const Card = () => {
-  return <div>Card</div>;
+const Card = ({ title }: CardProps) => {
+  return (
+    <article>
+      <div>
+        <h2>{title}</h2>
+      </div>
+    </article>
+  );
 };
 
 export default Card;
