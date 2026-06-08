@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 import { data } from "./data";
@@ -27,10 +29,10 @@ const getActivityMeta = (title: string) => {
 export default function Home() {
   return (
     <section className="min-h-dvh flex justify-center items-center">
-      <div className="grid grid-cols-4 grid-rows-2 gap-2">
+      <div className="grid grid-cols-4 grid-rows-2 gap-8 max-w-7xl">
         {/* First, double sized cell */}
-        <div className="row-span-2 bg-navy-900 rounded-3xl ">
-          <div className="bg-purple-600 rounded-3xl p-6 flex flex-col gap-2">
+        <div className="row-span-2 bg-navy-900 rounded-2xl ">
+          <div className="bg-purple-600 rounded-2xl p-6 flex flex-col gap-2">
             {/* User card */}
             <Image
               src={"/image-jeremy.png"}
@@ -45,9 +47,15 @@ export default function Home() {
 
           {/* Timeframe settings: */}
           <div className="flex flex-col justify-center items-start px-6 py-6 gap-4">
-            <button>Daily</button>
-            <button>Weekly</button>
-            <button>Monthly</button>
+            <button className="btn" onClick={() => console.log("Daily")}>
+              Daily
+            </button>
+            <button className="btn" onClick={() => console.log("Weekly")}>
+              Weekly
+            </button>
+            <button className="btn" onClick={() => console.log("Monthly")}>
+              Monthly
+            </button>
           </div>
         </div>
 
