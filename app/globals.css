@@ -41,8 +41,12 @@ body {
 
 .btn {
   @apply cursor-pointer text-navy-200;
-}
 
-.btn--active {
-  @apply text-purple-50;
+  &:hover {
+    @apply text-purple-50 motion-safe:duration-150 ease-in-out;
+  }
+
+  &.btn--active {
+    @apply text-purple-50;
+  }
 }
