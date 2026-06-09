@@ -31,8 +31,9 @@ export default function Home() {
   const [mode, setMode] = useState<"daily" | "weekly" | "monthly">("weekly");
 
   return (
-    <section className="min-h-dvh flex justify-center items-center">
-      <div className="grid grid-cols-4 grid-rows-2 gap-8 max-w-7xl">
+    <section className="min-h-dvh flex justify-center items-center mx-[4%] my-16">
+      {/* <div className="grid grid-cols-4 grid-rows-2 gap-8 max-w-7xl"> */}
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8 w-full max-w-7xl">
         {/* First, double sized cell */}
         <div className="row-span-2 bg-navy-900 rounded-2xl flex flex-col">
           <div className="bg-purple-600 rounded-2xl p-6 flex flex-col gap-2 grow">
@@ -83,61 +84,6 @@ export default function Home() {
           />
         ))}
       </div>
-      {/* 
-  
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-  */}
     </section>
   );
 }

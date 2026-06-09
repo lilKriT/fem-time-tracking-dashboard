@@ -28,12 +28,16 @@ const Card = ({ title, color, icon, mode, timeframes }: CardProps) => {
           <img src={"/icon-ellipsis.svg"} className="cursor-pointer" />
         </div>
 
-        <p className="text-6xl font-light mt-4">{timeframe.current}hrs</p>
-        {/* Different data depending on the mode */}
-        <p className="font-medium text-navy-200">
-          {mode === "daily" && "Last Day"} {mode === "weekly" && "Last Week"}
-          {mode === "monthly" && "Last Month"} - {timeframe.previous}hrs
-        </p>
+        <div className="flex justify-between items-center sm:flex-col sm:items-start gap-2 mt-2 sm:mt-4">
+          <p className="text-4xl sm:text-5xl md:text-6xl font-light">
+            {timeframe.current}hrs
+          </p>
+          {/* Different data depending on the mode */}
+          <p className="font-medium text-navy-200">
+            {mode === "daily" && "Last Day"} {mode === "weekly" && "Last Week"}
+            {mode === "monthly" && "Last Month"} - {timeframe.previous}hrs
+          </p>
+        </div>
       </div>
     </article>
   );
